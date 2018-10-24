@@ -1,3 +1,56 @@
 .App {
-  text-align: center;
+  max-width: 320px;
+  margin: 40px auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px #bbb;
+}
+
+.App button {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  font-size: 12px;
+  color: #444;
+  text-align: left;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.App button:hover,
+.App button:focus {
+  outline: 0;
+  border: 0;
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.App button span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.App button.folder::before {
+  content: '';
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 14px;
+  background: url(/icon-sprite.png);
+  background-position: -111px 0px;
+}
+
+.App button.file::before {
+  content: '';
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 14px;
+  background: url(/icon-sprite.png);
+  background-position: -140px 0px;
+  
 }

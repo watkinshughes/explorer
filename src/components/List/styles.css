@@ -1,0 +1,17 @@
+.List {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Child {
+  display: none;
+}
+
+.active > .Child {
+  display: block;
+}
+
+.List .Child button {
+  text-indent: 20px;
+}

@@ -1,0 +1,19 @@
+.Title {
+  position: relative;
+  padding: 20px 15px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+}
+
+.Title::after {
+  content: '';
+  display: block;   
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: url(/icon-sprite.png);
+  background-position: -42px 0px;
+  opacity: 0.3;
+}
