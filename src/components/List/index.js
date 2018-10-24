@@ -9,7 +9,7 @@ class List extends Component {
   list(data) {
     const children = (items) => {
       if (items) {
-        return <ul className="List Sublist">{ this.list(items) }</ul>
+        return <ul className="List Child">{ this.list(items) }</ul>
       }
     }
     
