@@ -23,8 +23,8 @@ class Item extends Component {
   render() {
     return <li className={this.state.active ? 'active': null} 
               onClick={this.toggleClass}>
-        <button>
-          { this.props.name }
+        <button className={this.props.type}>
+          <span>{ this.props.name }</span>
         </button>
         { this.props.children }
     </li>
