@@ -3,5 +3,10 @@
 }
 
 .Sublist {
+  display: none;
   margin-left: 20px;
+}
+
+.active > .Sublist {
+  display: block;
 }

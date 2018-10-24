@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import Item from '../Item';
+import data from '../../data.json';
 import './styles.css';
 
+
 class List extends Component {
-  
+
   list(data) {
     const children = (items) => {
       if (items) {
@@ -17,10 +19,10 @@ class List extends Component {
       </Item>
     })
   }
-  
+
   render() {
     return <ul className="List">
-      { this.list(this.props.data) }
+      { this.list(data.children) }
     </ul>
   }
 }
