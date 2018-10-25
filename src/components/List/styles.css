@@ -1,7 +1,12 @@
 .List {
-  list-style: none;
+  min-height: 300px;
+}
+
+.List,
+.Child {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .Child {
@@ -17,18 +22,18 @@
 }
 
 /* @todo: The following styles are not extensible. Need to replace */
-.List.Child .icon {
+.Child .icon {
   padding-left: 24px;
 }
 
-.List.Child .Child .icon {
+.Child .Child .icon {
   padding-left: 48px;
 }
 
-.List.Child .Child .Child .icon {
+.Child .Child .Child .icon {
   padding-left: 72px;
 }
 
-.List.Child .Child .Child .Child .icon {
+.Child .Child .Child .Child .icon {
   padding-left: 96px;
 }

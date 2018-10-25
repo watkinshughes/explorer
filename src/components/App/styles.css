@@ -1,7 +1,5 @@
 .App {
-  position: relative;
   max-width: 320px;
-  min-height: 500px;
   margin: 40px auto;
   background-color: #fff;
   border: 1px solid #ccc;
