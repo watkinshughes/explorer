@@ -6,7 +6,6 @@ class Item extends Component {
     super(props);
     this.toggleExpanded = this.toggleExpanded.bind(this);
     this.toggleSelected = this.toggleSelected.bind(this);
-    
     this.state = {
         expanded: false,
         selected: false
@@ -21,6 +20,10 @@ class Item extends Component {
   };
 
   toggleSelected(event) {
+    const selected = document.querySelector('.selected');
+    if (selected) {
+      selected.classList.remove('selected');
+    }
     const currentState = this.state.selected;
     this.setState({
       selected: !currentState
@@ -28,10 +31,10 @@ class Item extends Component {
   };
 
   render() {
-    return <li className={ this.state.expanded ? 'expanded': '' }>
-        <div className={ ` ${this.props.type} ${this.props.private ? 'private' : ''} ${this.state.selected ? 'selected': ''} `}>
+    return <li className={ `Item ${ this.state.expanded ? 'expanded': '' }` }>
+        <div className={ `${this.props.type} ${this.props.private ? 'private' : ''} ${this.state.selected ? 'selected': ''}` } onClick={ this.toggleSelected }>
           <span className="icon" onClick={ this.toggleExpanded }></span>
-          <button onClick={ this.toggleSelected }>
+          <button>
             { this.props.name }
           </button>
         </div>

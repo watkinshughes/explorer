@@ -1,39 +1,10 @@
 .App {
+  position: relative;
   max-width: 320px;
+  min-height: 500px;
   margin: 40px auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0px 10px 20px #bbb;
-}
-
-.App button {
-  -webkit-appearance: none;
-  display: inline-block;
-  width: 75%;
-  padding: 8px 0;
-  margin: 0 auto;
-  border: 0;
-  background-color: transparent;
-  font-size: 12px;
-  color: #444;
-  text-align: left;
-  text-transform: capitalize;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.App button:hover,
-.App button:focus {
-  outline: 0;
-  border: 0;
-}
-
-.App button:hover {
-  color: #fff;
-}
-
-.App button span {
-  display: inline-block;
-  vertical-align: top;
 }

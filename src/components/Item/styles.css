@@ -1,19 +1,49 @@
-.folder.selected,
-.file.selected {
+.Item button {
+  -webkit-appearance: none;
+  padding: 8px 0;
+  max-width: 100%;
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+  font-size: 12px;
+  color: #444;
+  text-align: left;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.Item button:hover,
+.Item button:focus {
+  outline: 0;
+  border: 0;
+}
+
+.Item button:hover {
+  color: #fff;
+}
+
+.Item button span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.Item .folder.selected,
+.Item .file.selected {
   color: #000;
   background-color: #85f442;
 }
 
-.folder:hover,
-.file:hover {
+.Item .folder:hover,
+.Item .file:hover {
   color: #fff;
   background-color: #4285f4;
 }
 
-.folder .icon::before,
-.folder button::before,
-.private.folder button::before,
-.file button::before {
+.Item .folder .icon::before,
+.Item .folder button::before,
+.Item .private.folder button::before,
+.Item .file button::before {
   content: '';
   display: inline-block;
   width: 14px;
@@ -21,33 +51,33 @@
   background: url(/icon-sprite.png);
 }
 
-.folder .icon::before {
+.Item .folder .icon::before {
   margin: -2px 4px;
   opacity: 0.3;
 }
 
-.folder button::before,
-.private.folder button::before,
-.file button::before {
+.Item .folder button::before,
+.Item .private.folder button::before,
+.Item .file button::before {
   margin: -2px 8px -2px 4px;
 }
 
-.folder .icon::before {
+.Item .folder .icon::before {
   background-position: -168px 0px;
 }
 
-.folder .expanded.icon::before {
+.Item.expanded > .folder .icon::before {
   background-position: -182px 0px;
 }
 
-.folder button::before, {
+.Item .folder button::before, {
   background-position: -111px 0px;
 }
 
-.private.folder button::before {
+.Item .private.folder button::before {
   background-position: -126px 0px;
 }
 
-.file button::before {
+.Item .file button::before {
   background-position: -140px 0px;
 }

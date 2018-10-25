@@ -1,1 +1,31 @@
-.Footer {}
+.Footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.Footer a {
+  text-decoration: none;
+}
+
+.Footer .link,
+.Footer .button {
+  margin: 10px;
+}
+
+.Footer .link {
+  color: #4285f4;
+}
+
+.Footer .button {
+  padding: 8px 12px;
+  background-color: #4285f4;
+  border-radius: 2px; 
+  color: #fff;
+}
