@@ -9,10 +9,7 @@
 
 .App button {
   -webkit-appearance: none;
-  display: inline-block;
-  width: 75%;
   padding: 8px 0;
-  margin: 0 auto;
   border: 0;
   background-color: transparent;
   font-size: 12px;
@@ -20,7 +17,6 @@
   text-align: left;
   text-transform: capitalize;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .App button:hover,
