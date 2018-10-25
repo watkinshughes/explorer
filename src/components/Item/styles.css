@@ -1,0 +1,40 @@
+.folder .icon::before {
+  content: '';
+  display: inline-block;
+  margin: -2px 4px;
+  width: 14px;
+  height: 14px;
+  background: url(/icon-sprite.png);
+  opacity: 0.3;
+}
+
+.folder .icon::before {
+  background-position: -168px 0px;
+}
+
+.expanded > .folder .icon::before {
+  background-position: -182px 0px;
+}
+
+span.folder::before,
+button.private .folder::before,
+span.file::before {
+  content: '';
+  display: inline-block;
+  margin: -2px 4px;
+  width: 14px;
+  height: 14px;
+  background: url(/icon-sprite.png);
+}
+
+span.folder::before, {
+  background-position: -111px 0px;
+}
+
+button.private .folder::before {
+  background-position: -126px 0px;
+}
+
+span.file::before {
+  background-position: -140px 0px;
+}

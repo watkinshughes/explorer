@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './styles.css';
 
 class Item extends Component {
   constructor(props) {
@@ -18,14 +19,13 @@ class Item extends Component {
   };
 
   render() {
-    return <li className={this.state.active ? 'expanded': null} onClick={this.toggleClass}>
-        <div className={this.props.type}>
-          <button className={this.props.private ? 'private' : null}>
-            <span className={this.props.type}>{ this.props.name }</span>
-          </button>
-        </div>
+    return <li className={ `${ this.props.type } ${ this.props.private ? 'private' : '' }`}>
+        <span className={ `icon ${this.state.active ? 'expanded': ''}` } onClick={ this.toggleClass }></span>
+        <button>
+          { this.props.name }
+        </button>
         { this.props.children }
-    </li>
+      </li>
   }
 }
 
