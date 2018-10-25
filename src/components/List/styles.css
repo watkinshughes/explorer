@@ -8,23 +8,23 @@
   display: none;
 }
 
-.active > .Child {
+.expanded > .Child {
   display: block;
 }
 
 /* @todo: The following styles are not extensible */
-.Child button {
+.List.Child button {
   padding-left: 24px;
 }
 
-.Child .Child button {
+.List.Child .Child button {
   padding-left: 48px;
 }
 
-.Child .Child .Child button {
+.List.Child .Child .Child button {
   padding-left: 72px;
 }
 
-.Child .Child .Child .Child button {
+.List.Child .Child .Child .Child button {
   padding-left: 96px;
 }

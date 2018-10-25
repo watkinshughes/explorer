@@ -3,7 +3,6 @@ import Item from '../Item';
 import data from '../../data.json';
 import './styles.css';
 
-
 class List extends Component {
 
   list(data) {

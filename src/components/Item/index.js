@@ -18,7 +18,7 @@ class Item extends Component {
   };
 
   render() {
-    return <li className={this.state.active ? 'active': null} onClick={this.toggleClass}>
+    return <li className={this.state.active ? 'expanded': null} onClick={this.toggleClass}>
         <div className={this.props.type}>
           <button className={this.props.private ? 'private' : null}>
             <span className={this.props.type}>{ this.props.name }</span>
