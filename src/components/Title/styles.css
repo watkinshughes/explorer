@@ -16,4 +16,5 @@
   background: url(/icon-sprite.png);
   background-position: -42px 0px;
   opacity: 0.3;
+  cursor: pointer;
 }
