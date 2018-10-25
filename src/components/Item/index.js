@@ -11,16 +11,16 @@ class Item extends Component {
   }
 
   toggleClass(event) {
-    const currentState = this.state.active;
+    const currentState = this.state.expanded;
     this.setState({
-      active: !currentState
+      expanded: !currentState
     });
     event.stopPropagation();
   };
 
   render() {
     return <li className={ `${ this.props.type } ${ this.props.private ? 'private' : '' }`}>
-        <span className={ `icon ${this.state.active ? 'expanded': ''}` } onClick={ this.toggleClass }></span>
+        <span className={ `icon ${this.state.expanded ? 'expanded': ''}` } onClick={ this.toggleClass }></span>
         <button>
           { this.props.name }
         </button>
