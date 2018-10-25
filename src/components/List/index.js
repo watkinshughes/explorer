@@ -3,7 +3,6 @@ import Item from '../Item';
 import data from '../../data.json';
 import './styles.css';
 
-
 class List extends Component {
 
   list(data) {
@@ -12,9 +11,9 @@ class List extends Component {
         return <ul className="List Child">{ this.list(items) }</ul>
       }
     }
-    
+
     return data.map((node, index) => {
-      return <Item key={ index } name={ node.name } type={ node.type }>
+      return <Item key={ index } name={ node.name } type={ node.type } private={ node.private }>
         { children(node.children) }
       </Item>
     })

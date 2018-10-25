@@ -8,10 +8,23 @@
   display: none;
 }
 
-.active > .Child {
+.expanded > .Child {
   display: block;
 }
 
-.List .Child button {
-  text-indent: 20px;
+/* @todo: The following styles are not extensible */
+.List.Child button {
+  padding-left: 24px;
+}
+
+.List.Child .Child button {
+  padding-left: 48px;
+}
+
+.List.Child .Child .Child button {
+  padding-left: 72px;
+}
+
+.List.Child .Child .Child .Child button {
+  padding-left: 96px;
 }
