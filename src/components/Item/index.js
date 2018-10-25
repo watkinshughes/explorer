@@ -20,7 +20,7 @@ class Item extends Component {
   };
 
   toggleSelected(event) {
-    let selected = document.querySelector('.selected');
+    const selected = document.querySelector('.selected');
     if (selected) {
       selected.classList.remove('selected');
     }
