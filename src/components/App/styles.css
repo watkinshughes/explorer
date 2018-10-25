@@ -77,7 +77,7 @@
   opacity: 0.3;
 }
 
-.App .active > .folder > button::before {
+.App .expanded > .folder > button::before {
   content: '';
   display: inline-block;
   margin: -2px 4px;
