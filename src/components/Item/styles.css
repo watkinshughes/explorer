@@ -1,40 +1,53 @@
-.folder .icon::before {
+.folder.selected,
+.file.selected {
+  color: #000;
+  background-color: #85f442;
+}
+
+.folder:hover,
+.file:hover {
+  color: #fff;
+  background-color: #4285f4;
+}
+
+.folder .icon::before,
+.folder button::before,
+.private.folder button::before,
+.file button::before {
   content: '';
   display: inline-block;
-  margin: -2px 4px;
   width: 14px;
   height: 14px;
   background: url(/icon-sprite.png);
+}
+
+.folder .icon::before {
+  margin: -2px 4px;
   opacity: 0.3;
+}
+
+.folder button::before,
+.private.folder button::before,
+.file button::before {
+  margin: -2px 8px -2px 4px;
 }
 
 .folder .icon::before {
   background-position: -168px 0px;
 }
 
-.expanded > .folder .icon::before {
+.folder .expanded.icon::before {
   background-position: -182px 0px;
 }
 
-span.folder::before,
-button.private .folder::before,
-span.file::before {
-  content: '';
-  display: inline-block;
-  margin: -2px 4px;
-  width: 14px;
-  height: 14px;
-  background: url(/icon-sprite.png);
-}
-
-span.folder::before, {
+.folder button::before, {
   background-position: -111px 0px;
 }
 
-button.private .folder::before {
+.private.folder button::before {
   background-position: -126px 0px;
 }
 
-span.file::before {
+.file button::before {
   background-position: -140px 0px;
 }

@@ -9,11 +9,12 @@
 
 .App button {
   -webkit-appearance: none;
-  display: block;
-  width: 99%;
+  display: inline-block;
+  width: 75%;
+  padding: 8px 0;
   margin: 0 auto;
-  padding: 8px;
   border: 0;
+  background-color: transparent;
   font-size: 12px;
   color: #444;
   text-align: left;
@@ -22,23 +23,17 @@
   text-overflow: ellipsis;
 }
 
-.App button span {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.App button:hover {
-  color: #fff;
-  background-color: #4285f4;
-}
-
-.App button:focus {
-  color: #000;
-  background-color: #85f442;
-}
-
 .App button:hover,
 .App button:focus {
   outline: 0;
   border: 0;
+}
+
+.App button:hover {
+  color: #fff;
+}
+
+.App button span {
+  display: inline-block;
+  vertical-align: top;
 }

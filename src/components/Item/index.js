@@ -4,26 +4,37 @@ import './styles.css';
 class Item extends Component {
   constructor(props) {
     super(props);
-    this.toggleClass= this.toggleClass.bind(this);
+    this.toggleExpanded = this.toggleExpanded.bind(this);
+    this.toggleSelected = this.toggleSelected.bind(this);
+    
     this.state = {
-        active: false,
+        expanded: false,
+        selected: false
     };
   }
 
-  toggleClass(event) {
+  toggleExpanded(event) {
     const currentState = this.state.expanded;
     this.setState({
       expanded: !currentState
     });
-    event.stopPropagation();
+  };
+
+  toggleSelected(event) {
+    const currentState = this.state.selected;
+    this.setState({
+      selected: !currentState
+    });
   };
 
   render() {
-    return <li className={ `${ this.props.type } ${ this.props.private ? 'private' : '' }`}>
-        <span className={ `icon ${this.state.expanded ? 'expanded': ''}` } onClick={ this.toggleClass }></span>
-        <button>
-          { this.props.name }
-        </button>
+    return <li className={ this.state.expanded ? 'expanded': '' }>
+        <div className={ ` ${this.props.type} ${this.props.private ? 'private' : ''} ${this.state.selected ? 'selected': ''} `}>
+          <span className="icon" onClick={ this.toggleExpanded }></span>
+          <button onClick={ this.toggleSelected }>
+            { this.props.name }
+          </button>
+        </div>
         { this.props.children }
       </li>
   }
