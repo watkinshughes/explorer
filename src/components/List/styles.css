@@ -4,14 +4,11 @@
   padding: 0;
 }
 
-.Child {
+.List.Child {
   display: none;
+  padding: 0 0 0 24px;
 }
 
-.active > .Child {
+.active > .List.Child {
   display: block;
-}
-
-.List .Child button {
-  text-indent: 20px;
 }
