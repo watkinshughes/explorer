@@ -9,11 +9,12 @@
 
 .App button {
   -webkit-appearance: none;
-  display: block;
-  width: 99%;
+  display: inline-block;
+  width: 75%;
+  padding: 8px 0;
   margin: 0 auto;
-  padding: 8px;
   border: 0;
+  background-color: transparent;
   font-size: 12px;
   color: #444;
   text-align: left;
@@ -22,68 +23,17 @@
   text-overflow: ellipsis;
 }
 
-.App button span {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.App button:hover {
-  color: #fff;
-  background-color: #4285f4;
-}
-
-.App button:focus {
-  color: #000;
-  background-color: #85f442;
-}
-
 .App button:hover,
 .App button:focus {
   outline: 0;
   border: 0;
 }
 
-.App span.folder::before,
-.App button.private .folder::before,
-.App span.file::before {
-  content: '';
+.App button:hover {
+  color: #fff;
+}
+
+.App button span {
   display: inline-block;
-  margin: -2px 4px;
-  width: 14px;
-  height: 14px;
-  background: url(/icon-sprite.png);
-}
-
-.App span.folder::before, {
-  background-position: -111px 0px;
-}
-
-.App button.private .folder::before {
-  background-position: -126px 0px;
-}
-
-.App span.file::before {
-  background-position: -140px 0px;
-}
-
-.App .folder button::before {
-  content: '';
-  display: inline-block;
-  margin: -2px 4px;
-  width: 14px;
-  height: 14px;
-  background: url(/icon-sprite.png);
-  background-position: -168px 0px;
-  opacity: 0.3;
-}
-
-.App .active > .folder > button::before {
-  content: '';
-  display: inline-block;
-  margin: -2px 4px;
-  width: 14px;
-  height: 14px;
-  background: url(/icon-sprite.png);
-  background-position: -182px 0px;
-  opacity: 0.3;
+  vertical-align: top;
 }

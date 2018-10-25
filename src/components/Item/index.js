@@ -1,31 +1,42 @@
 import React, {Component} from 'react';
+import './styles.css';
 
 class Item extends Component {
   constructor(props) {
     super(props);
-    this.toggleClass= this.toggleClass.bind(this);
+    this.toggleExpanded = this.toggleExpanded.bind(this);
+    this.toggleSelected = this.toggleSelected.bind(this);
+    
     this.state = {
-        active: false,
+        expanded: false,
+        selected: false
     };
   }
 
-  toggleClass(event) {
-    const currentState = this.state.active;
+  toggleExpanded(event) {
+    const currentState = this.state.expanded;
     this.setState({
-      active: !currentState
+      expanded: !currentState
     });
-    event.stopPropagation();
+  };
+
+  toggleSelected(event) {
+    const currentState = this.state.selected;
+    this.setState({
+      selected: !currentState
+    });
   };
 
   render() {
-    return <li className={this.state.active ? 'expanded': null} onClick={this.toggleClass}>
-        <div className={this.props.type}>
-          <button className={this.props.private ? 'private' : null}>
-            <span className={this.props.type}>{ this.props.name }</span>
+    return <li className={ this.state.expanded ? 'expanded': '' }>
+        <div className={ ` ${this.props.type} ${this.props.private ? 'private' : ''} ${this.state.selected ? 'selected': ''} `}>
+          <span className="icon" onClick={ this.toggleExpanded }></span>
+          <button onClick={ this.toggleSelected }>
+            { this.props.name }
           </button>
         </div>
         { this.props.children }
-    </li>
+      </li>
   }
 }
 

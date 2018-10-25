@@ -12,19 +12,23 @@
   display: block;
 }
 
-/* @todo: The following styles are not extensible */
-.List.Child button {
+.List .icon {
+  padding-left: 12px;
+}
+
+/* @todo: The following styles are not extensible. Need to replace */
+.List.Child .icon {
   padding-left: 24px;
 }
 
-.List.Child .Child button {
+.List.Child .Child .icon {
   padding-left: 48px;
 }
 
-.List.Child .Child .Child button {
+.List.Child .Child .Child .icon {
   padding-left: 72px;
 }
 
-.List.Child .Child .Child .Child button {
+.List.Child .Child .Child .Child .icon {
   padding-left: 96px;
 }
