@@ -17,7 +17,7 @@ defeat the purpose of this project!
 * Visually has appearance similar to that of `mockup.png` (private folders should have the red icon appearance)
 
 ### Minimum Features
-* Folders should be able to expand or collapse by clicking anywhere on the row (not just the icon or label itself)
+* Folders should be able to expand or collapse by clicking on the expand/collapse icon. 
 * Folders and files should have a hover appearance (such as highlighting the row blue).
 * Folders and files are selected by clicking on the row, but only one folder or file should be selected at a time. A selected folder/file should have some sort of special appearance (such as highlighting the row green)
 
