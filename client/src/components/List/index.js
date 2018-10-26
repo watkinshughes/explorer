@@ -1,9 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Item from '../Item';
-import data from '../../data.json';
+import { children } from '../../data.json';
 import './styles.css';
 
 class List extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: {},
+    };
+  }
 
   list(data) {
     const children = (items) => {
@@ -20,8 +27,9 @@ class List extends Component {
   }
 
   render() {
+
     return <ul className="List">
-      { this.list(data.children) }
+      { this.list(children) }
     </ul>
   }
 }
