@@ -13,12 +13,6 @@
   text-overflow: ellipsis;
 }
 
-.Item button:hover,
-.Item button:focus {
-  outline: 0;
-  border: 0;
-}
-
 .Item button:hover {
   color: #fff;
 }
@@ -42,8 +36,8 @@
 
 .Item .folder .icon::before,
 .Item .folder button::before,
-.Item .private.folder button::before,
-.Item .file button::before {
+.Item .private.folder button:not(.icon)::before,
+.Item .file button:not(.icon)::before {
   content: '';
   display: inline-block;
   width: 14px;
@@ -57,8 +51,8 @@
 }
 
 .Item .folder button::before,
-.Item .private.folder button::before,
-.Item .file button::before {
+.Item .private.folder button:not(.icon)::before,
+.Item .file button:not(.icon)::before {
   margin: -2px 8px -2px 4px;
 }
 
@@ -74,10 +68,10 @@
   background-position: -111px 0px;
 }
 
-.Item .private.folder button::before {
+.Item .private.folder button:not(.icon)::before {
   background-position: -126px 0px;
 }
 
-.Item .file button::before {
+.Item .file button:not(.icon)::before {
   background-position: -140px 0px;
 }
