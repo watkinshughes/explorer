@@ -3,7 +3,7 @@ import './styles.css';
 
 class CloseButton extends Component {
   render() {
-    return <button className="CloseButton" href="#close">
+    return <button className="CloseButton">
       <span className="visually-hidden">Close Modal</span>
     </button>
   }

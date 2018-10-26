@@ -8,13 +8,11 @@
   font-size: 12px;
 }
 
-.Footer a {
-  text-decoration: none;
-}
-
 .Footer .link,
 .Footer .button {
+  -webkit-appearance: none;
   margin: 10px;
+  border: 0;
 }
 
 .Footer .link {
