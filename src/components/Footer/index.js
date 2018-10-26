@@ -1,26 +1,14 @@
 import React, {Component} from 'react';
+import {exportData} from '../../services/exportData.js'
+import {importData} from '../../services/importData.js'
 import './styles.css';
 
 class Footer extends Component {
 
-  constructor(props) {
-    super(props);
-    this.import = this.import.bind(this);
-    this.export = this.export.bind(this);
-  }
-
-  import(event) {
-    alert('Import');
-  };
-
-  export(event) {
-    alert('Export');
-  };
-
   render() {
     return <div className="Footer">
-        <button className="link" onClick={ this.import }>Import</button>
-        <button className="button" onClick={ this.export }>Export</button>
+        <button className="link" onClick={ importData }>Import</button>
+        <button className="button" onClick={ exportData }>Export</button>
       </div>
   }
 }

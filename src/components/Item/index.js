@@ -12,14 +12,14 @@ class Item extends Component {
     };
   }
 
-  toggleExpanded(event) {
+  toggleExpanded() {
     const currentState = this.state.expanded;
     this.setState({
       expanded: !currentState
     });
   };
 
-  toggleSelected(event) {
+  toggleSelected() {
     const selected = document.querySelector('.selected');
     if (selected) {
       selected.classList.remove('selected');
