@@ -1,11 +1,23 @@
 .Footer {
   width: 100%;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   background-color: transparent;
   border-top: 1px solid #ccc;
   font-size: 12px;
+}
+
+.Footer form {
+  padding: 10px;
+}
+
+.Footer input[type="file"] {
+  width: 220px;
+}
+
+.Footer .import {
+  border-bottom: 1px solid #ccc;
 }
 
 .Footer .link,
@@ -20,6 +32,9 @@
 }
 
 .Footer .button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
   padding: 8px 12px;
   background-color: #4285f4;
   border-radius: 2px; 

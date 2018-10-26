@@ -5,6 +5,20 @@ import './styles.css';
 
 class List extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: null,
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:8000/public/data.json')
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
+
   list(data) {
     const children = (items) => {
       if (items) {
@@ -20,6 +34,7 @@ class List extends Component {
   }
 
   render() {
+
     return <ul className="List">
       { this.list(data.children) }
     </ul>
