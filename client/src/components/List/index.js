@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Item from '../Item';
-import { children } from '../../data.json';
 import './styles.css';
 
 class List extends Component {
@@ -8,7 +7,9 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {},
+      data: {
+        children: []
+      },
     };
   }
 
@@ -26,10 +27,16 @@ class List extends Component {
     })
   }
 
-  render() {
+  componentDidMount() {
+    fetch('http://localhost:8000/public/data.json')
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
 
+
+  render() {
     return <ul className="List">
-      { this.list(children) }
+      { this.list(this.state.data.children) }
     </ul>
   }
 }
