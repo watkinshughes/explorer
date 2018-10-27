@@ -23,17 +23,17 @@
 
 /* @todo: The following styles are not extensible. Need to replace */
 .Child .icon {
-  padding-left: 24px;
+  padding-left: 34px;
 }
 
 .Child .Child .icon {
-  padding-left: 48px;
+  padding-left: 58px;
 }
 
 .Child .Child .Child .icon {
-  padding-left: 72px;
+  padding-left: 82px;
 }
 
 .Child .Child .Child .Child .icon {
-  padding-left: 96px;
+  padding-left: 106px;
 }
