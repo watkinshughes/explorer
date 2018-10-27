@@ -18,12 +18,13 @@ app.use(cors());
 app.use(fileUpload());
 app.use('/public', express.static(__dirname + '/public'));
 
-app.get('/export', (req, res, next) => {});
+app.get('/export', function(req, res){
+  const file =`${__dirname}/public/data.json`;
+  res.download(file);
+});
 
 app.post('/import', (req, res, next) => {
-  console.log(req);
   let jsonFile = req.files.file;
-
   jsonFile.mv(`${__dirname}/public/${req.body.filename}`, function(err) {
     if (err) {
       return res.status(500).send(err);
