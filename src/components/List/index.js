@@ -5,10 +5,10 @@ import './styles.css';
 
 class List extends Component {
 
-  list(data) {
+  buildRecursiveList(data) {
     const children = (items) => {
       if (items) {
-        return <ul className="Child">{ this.list(items) }</ul>
+        return <ul className="Child">{ this.buildRecursiveList(items) }</ul>
       }
     }
 
@@ -21,7 +21,7 @@ class List extends Component {
 
   render() {
     return <ul className="List">
-      { this.list(data.children) }
+      { this.buildRecursiveList(data.children) }
     </ul>
   }
 }
