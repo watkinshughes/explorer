@@ -11,7 +11,6 @@ class List extends Component {
         return <ul className="Child">{ this.buildRecursiveList(items) }</ul>
       }
     }
-
     return data.map((node, index) => {
       return <Item key={ index } name={ node.name } type={ node.type } private={ node.private }>
         { children(node.children) }
