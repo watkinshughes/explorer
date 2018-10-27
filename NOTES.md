@@ -15,7 +15,7 @@ The CSS approach is fairly simple, as I wanted to focus on the JS side of things
 
 I used semantic HTML elements throughout the application, and added a couple of accessibility features such as `.visually-hidden` content and a clear focus state for clickable elements. The application should be completely usable via keyboard without the use of a mouse. Screen reader technology should also be pretty capable of using the application. If accessibility is a priority I would extend these features by adding `aria-labels` and other `aria` attributes to help users with screenreaders to understand what elements are expanded etc.
 
-# import-export branch
+## import-export branch
 
 This branch adds an Express server, and fetches the `data.json` via the Fetch API in order to support importing and exporting data.
 
