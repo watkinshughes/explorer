@@ -11,14 +11,12 @@ class Item extends Component {
         selected: false
     };
   }
-
   toggleExpanded() {
     const currentState = this.state.expanded;
     this.setState({
       expanded: !currentState
     });
   };
-
   toggleSelected() {
     const selected = document.querySelector('.selected');
     if (selected) {
@@ -29,7 +27,6 @@ class Item extends Component {
       selected: !currentState
     });
   };
-
   render() {
     return <li className={ `Item ${ this.state.expanded ? 'expanded': '' }` }>
         <div className={ `${this.props.type} ${this.props.private ? 'private' : ''} ${this.state.selected ? 'selected': ''}` } onClick={ this.toggleSelected }>
