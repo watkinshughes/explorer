@@ -13,6 +13,12 @@ class List extends Component {
     };
   }
 
+  fetchData() {
+    fetch('http://localhost:8000/public/data.json')
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
+
   list(data) {
     const children = (items) => {
       if (items) {
@@ -28,11 +34,8 @@ class List extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8000/public/data.json')
-      .then(response => response.json())
-      .then(data => this.setState({ data }));
+    this.fetchData()
   }
-
 
   render() {
     return <ul className="List">

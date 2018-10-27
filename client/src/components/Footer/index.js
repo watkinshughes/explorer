@@ -5,16 +5,13 @@ class Footer extends Component {
 
   constructor(props) {
     super(props);
-
+    this.importData = this.importData.bind(this);
     this.state = {
       fileURL: '',
     };
-
-    this.importData = this.importData.bind(this);
   }
 
-  importData(ev) {
-    ev.preventDefault();
+  importData(event) {
 
     const data = new FormData();
     data.append('file', this.uploadInput.files[0]);
@@ -26,7 +23,7 @@ class Footer extends Component {
     }).then((response) => {
       response.json().then((body) => {
         this.setState({ fileURL: `http://localhost:8000/${body.file}` });
-      });
+      }).catch(error => console.error('Error:', error));
     });
   }
 
