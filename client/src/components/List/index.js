@@ -13,16 +13,16 @@ class List extends Component {
     };
   }
 
-  fetchData() {
-    fetch('http://localhost:8000/public/data.json')
+  fetchData(url) {
+    fetch(url)
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }
 
-  list(data) {
+  buildRecursiveList(data) {
     const children = (items) => {
       if (items) {
-        return <ul className="Child">{ this.list(items) }</ul>
+        return <ul className="Child">{ this.buildRecursiveList(items) }</ul>
       }
     }
 
@@ -34,12 +34,12 @@ class List extends Component {
   }
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchData('http://localhost:8000/public/data.json')
   }
 
   render() {
     return <ul className="List">
-      { this.list(this.state.data.children) }
+      { this.buildRecursiveList(this.state.data.children) }
     </ul>
   }
 }

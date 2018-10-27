@@ -11,7 +11,7 @@ class Footer extends Component {
     };
   }
 
-  importData(event) {
+  importData() {
     const data = new FormData();
     data.append('file', this.uploadInput.files[0]);
     data.append('filename', 'data.json');
@@ -25,23 +25,14 @@ class Footer extends Component {
     });
   }
 
-  exportData(event) {
-    event.preventDefault();
-    fetch('http://localhost:8000/export', {
-      method: 'GET'
-    }).then((response) => {
-      console.log(response);
-    });
-  }
-
   render() {
     return <div className="Footer">
         <form className="import" onSubmit={ this.importData }>
           <input ref={ (ref) => { this.uploadInput = ref; } } type="file" />
           <button className="link" onClick={ this.importData }>Import</button>
         </form>
-        <form onSubmit={this.exportData }>
-          <button className="button" onClick={ this.exportData }>Export</button>
+        <form action="http://localhost:8000/export">
+          <button className="button">Export</button>
         </form>
       </div>
   }

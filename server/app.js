@@ -8,12 +8,9 @@ const cors = require('cors');
 const app = express();
 
 app.use(logger('dev'));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-// Use cors and fileUpload
 app.use(cors());
 app.use(fileUpload());
 app.use('/public', express.static(__dirname + '/public'));
@@ -24,12 +21,13 @@ app.get('/export', function(req, res){
 });
 
 app.post('/import', (req, res, next) => {
-  let jsonFile = req.files.file;
-  jsonFile.mv(`${__dirname}/public/${req.body.filename}`, function(err) {
+  const jsonFile = req.files.file;
+  const filePath = `${__dirname}/public/${req.body.filename}`;
+  jsonFile.mv(filePath, function(err) {
     if (err) {
       return res.status(500).send(err);
     }
-    res.json({file: `public/${req.body.filename}`});
+    res.json({file: filePath});
   });
 });
 
