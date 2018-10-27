@@ -16,8 +16,7 @@ app.use(fileUpload());
 app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/export', function(req, res){
-  const file =`${__dirname}/public/data.json`;
-  res.download(file);
+  res.download(`${__dirname}/public/data.json`);
 });
 
 app.post('/import', (req, res, next) => {
