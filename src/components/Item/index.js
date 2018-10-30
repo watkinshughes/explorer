@@ -21,10 +21,10 @@ class Item extends Component {
 
   toggleSelected() {
     const selected = document.querySelector('.selected');
+    const currentState = this.state.selected;
     if (selected) {
       selected.classList.remove('selected');
     }
-    const currentState = this.state.selected;
     this.setState({
       selected: !currentState
     });
